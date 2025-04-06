@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .nav-pills .nav-link:hover,
+        .nav-pills .nav-link:focus {
+          background-color: #198754 !important; /* Bootstrap 'success' green */
+          color: #fff !important;
+        }
+        .nav-link{
+            color: white;
+        }
+        .tab-header-full {
+            background-color: #198754;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            padding: 1rem;
+        }
+        .bank-card {
+              border: 1px solid #d1d1d1;
+              border-radius: 10px;
+              padding: 20px;
+              background-color: #fff;
+              box-shadow: 0 0 10px rgba(0,0,0,0.05);
+              margin-bottom: 20px;
+      }
+    .section-title {
+          font-weight: 600;
+          font-size: 1.5rem;
+          color: #2c3e50;
+          margin-bottom: 20px;
+    }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                        <ul class="nav nav-pills fixed-bottom nav-fill card-header-pills" id="mytab" role="tablist" style="background-color: #198754">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                                    <i class="bi bi-house-door"></i><br>
+                                    Home
+
+                                </button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="Accounts" data-bs-toggle="tab" data-bs-target="#accounts-tab-pane" type="button" role="tab" aria-controls="accounts-tab-pane" aria-selected="false">
+                                    <i class="bi bi-wallet"></i><br>
+                                    Accounts
+                                </button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="history-tab" data-bs-toggle="tab" data-bs-target="#history-tab-pane" type="button" role="tab" aria-controls="history-tab-pane" aria-selected="false">
+                                  <i class="bi bi-cash-coin"></i><br>
+                                  History
+                              </button>
+                          </li>    
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="movemoney-tab" data-bs-toggle="tab" data-bs-target="#movemoney-tab-pane" type="button" role="tab" aria-controls="movemoney-tab-pane" aria-selected="false">
+                                    <i class="bi bi-cash-coin"></i><br>
+                                    Move Money
+                                </button>
+                            </li>
+
+                            
+                       
+                        </ul>
+
+
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col">
+                                          <div class="tab-header-full text-white">
+                                            <p class="mt-5 text-white  fs-2 text-center" style="font-weight: bolder;">
+                                                Welcome to <span><img src="unnamed.webp" alt="" style="width: 50px;"></span> Bank
+                                            </p>
+                                        </div>
+                                        </div>
+
+                                      </div>
+
+                                      <div class="row">
+                                        <div class="col">
+                                            
+                                            <p class="mt-3  fs-2">
+                                                Good evening<br>
+                                                Rebecca Mendy
+                                            </p>
+
+                                            <div class="mt-5">
+                                                <p class="fs-1 fw-bold">My Accounts <span> > </span></p>
+                                            </div>
+
+                                            <div class="fs-2 mt-5">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                      <div class="ms-2 me-auto">
+                                                        <div class="fw-bold">Banking</div>
+                                                        2 accounts
+                                                      </div>
+                                                      <span class="fw-bolder mt-2">$123,340.00</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="fs-2 mt-5">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                      <div class="ms-2 me-auto">
+                                                        <div class="fw-bold">Credit Card</div>
+                                                        1 account
+                                                      </div>
+                                                      <span class="fw-bolder mt-2">$12,500.00</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="fs-2 mt-5">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                      <div class="ms-2 me-auto">
+                                                        <div class="fw-bold">Personal Investing</div>
+                                                        2 accounts
+                                                      </div>
+                                                      <span class="fw-bolder mt-2">$23,356.00</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="fs-2 mt-5">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                      <div class="ms-2 me-auto">
+                                                        <div class="fw-medium"><i class="bi bi-plus-circle"></i> Add Accounts and Services</div>
+                                                      </div>
+                                                      
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                      </div>
+
+                                      <div>
+                                        <p class="fs-1 fw-bolder mt-5">Recent Transaction <i class="bi bi-arrow-right"></i></p>
+                                      </div>
+
+                                    
+                                      <div class="fs-2 mt-5">
+                                        <div class="list-group list-group-flush">
+                                           <div class="list-group-item text-success">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1 fs-2">Direct Deposit</h5>
+                                                    <small class="fw-medium">+$2,500.00</small>
+                                                </div>
+                                                <p class="mb-1 fw-medium">Deposit</p>
+                                                <small class="fw-medium">2025-03-26</small>
+                                           </div>
+
+                                           <div class="list-group-item text-danger">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1 fs-2">Starbucks</h5>
+                                                    <small class="fw-medium">-$6.00</small>
+                                                </div>
+                                                <p class="mb-1 fw-medium">Deposit</p>
+                                                <small class="fw-medium">2025-03-26</small>
+                                           </div>
+
+                                           <div class="list-group-item text-success">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1 fs-2">Transfer to Savings</h5>
+                                                    <small class="fw-medium">+$6,300.20</small>
+                                                </div>
+                                                <p class="mb-1 fw-medium">Internal Transfer</p>
+                                                <small class="fw-medium">2025-03-22</small>
+                                           </div>
+
+                                           <div class="list-group-item text-danger">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1 fs-2">Netflix</h5>
+                                                    <small class="fw-medium">-$15.00</small>
+                                                </div>
+                                                <p class="mb-1 fw-medium">Subscription</p>
+                                                <small class="fw-medium">2025-03-22</small>
+                                           </div>
+
+                                           <div class="list-group-item text-danger">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1 fs-2">ATM Withdrawal</h5>
+                                                    <small class="fw-medium">-$500.00</small>
+                                                </div>
+                                                <p class="mb-1 fw-medium">Cash Withdrawal</p>
+                                                <small class="fw-medium">2025-03-21</small>
+                                           </div>
+
+                                           <div class="list-group-item text-success">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1 fs-2">Direct Deposit</h5>
+                                                    <small class="fw-medium">+$12,535.00</small>
+                                                </div>
+                                                <p class="mb-1 fw-medium">Deposit</p>
+                                                <small class="fw-medium">2025-03-20</small>
+                                           </div>
+
+                                           <div class="list-group-item text-success">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1 fs-2">Direct Deposit</h5>
+                                                    <small class="fw-medium">+$4,140.39</small>
+                                                </div>
+                                                <p class="mb-1 fw-medium">Deposit</p>
+                                                <small class="fw-medium">2025-03-19</small>
+                                           </div>
+
+                                           <div class="list-group-item text-danger">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1 fs-2">Starbucks</h5>
+                                                    <small class="fw-medium">-$20.00</small>
+                                                </div>
+                                                <p class="mb-1 fw-medium">Debit Card Purchase</p>
+                                                <small class="fw-medium">2025-03-19</small>
+                                           </div>
+
+                                           <div class="list-group-item text-danger">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1 fs-2">Grocery - Trader's Joe</h5>
+                                                    <small class="fw-medium">-$530.43</small>
+                                                </div>
+                                                <p class="mb-1 fw-medium">Debit Card Purchase</p>
+                                                <small class="fw-medium">2025-03-17</small>
+                                           </div>
+
+                                           <div class="list-group-item text-danger">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1 fs-2">Amazon Purchase</h5>
+                                                    <small class="fw-medium">-$825.30</small>
+                                                </div>
+                                                <p class="mb-1 fw-medium">Debit Card Purchase</p>
+                                                <small class="fw-medium">2025-03-16</small>
+                                           </div>
+                                           
+                                          </div>History
+                                    </div>
+                            </div>
+   
+
+                        <div class="tab-pane fade" id="accounts-tab-pane" role="tabpanel" aria-labelledby="accounts-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="tab-header-full text-white">
+                                      <p class="mt-5 text-white  fs-2 text-center" style="font-weight: bolder;">
+                                          Welcome to <span><img src="unnamed.webp" alt="" style="width: 50px;"></span> Bank
+                                      </p>
+                                  </div>
+                                  </div>
+                            </div>
+
+                            <p class="mt-5 fs-1 fw-bolder">My Accounts</p>
+
+                            <p class="mt-5 fs-1 fw-bolder">Banking</p>
+
+                            <div>
+                                <div class="card">
+                                    <ul class="list-group list-group-flush mt-3">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold fs-2" style="color: #198754;">TD UNLIMITED <br> CHEQUING ACCOUNT</div>
+                                           <span class="fs-3">6262816281</span>
+                                          </div>
+                                          <span class="fs-2 fw-medium">$64,350.12</span>
+                                        </li>
+    
+                                        <li class="list-group-item list-group-flush d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold fs-2" style="color: #198754;">TD EVERYDAY <br> SAVINGS ACCOUNT</div>
+                                            <span class="fs-3">63627819301</span>
+                                          </div>
+                                          <span class="fs-2 fw-medium">$58,990.13</span>
+                                        </li>
+    
+                                        <li class="list-group-item d-flex justify-content-between align-items-start mb-3">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold fs-3">Total</div>
+                                          </div>
+                                          <span class="fs-3 fw-medium">$123,340.25</span>
+                                        </li>
+                                      </ul>
+                                </div>
+                            </div>
+
+                            <p class="mt-5 fs-1 fw-bolder">Credit Cards</p>
+
+                            <div>
+                                <div class="card">
+                                    <ul class="list-group list-group-flush mt-3">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold fs-3" style="color: #198754;">TD CASH BACK VISA*CARD</div>
+                                            <span class="fs-3"> 452034******6321    </span>
+                                        </div>
+                                          <span class="fs-3 fw-medium">$12,500.00</span>
+                                        </li>
+    
+                                        <li class="list-group-item list-group-flush d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold fs-3">Available Balance</div>
+                                            
+                                          </div>
+                                          <span class="fs-3 fw-medium">$7,233.65</span>
+                                        </li>
+    
+                                        <li class="list-group-item d-flex justify-content-between align-items-start mb-3">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold fs-3">Current Balance</div>
+                                          </div>
+                                          <span class="fs-3 fw-medium">$5,266.35</span>
+                                        </li>
+                                      </ul>
+                                </div>
+                            </div>
+
+                            <p class="mt-5 fs-1 fw-bolder">Personal Investing</p>
+
+
+                            <div>
+                                <div class="card">
+                                    <ul class="list-group list-group-flush mt-3">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold fs-3" style="color: #198754;">HIGH INTEREST TFSA <br> SAVINGS ACCOUNT</div>
+                                            <span class="fs-3"> 6524162881</span>
+                                        </div>
+                                          <span class="fs-3 fw-medium">$11,120.00</span>
+                                        </li>
+
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                              <div class="fw-bold fs-3" style="color: #198754;">DAILY INTEREST SAVINGS RSP</div>
+                                              <span class="fs-3">19286352789</span>
+                                          </div>
+                                            <span class="fs-3 fw-medium">$12,236.00</span>
+                                          </li>
+
+                                        
+                                      </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="tab-pane fade" id="history-tab-pane" role="tabpanel" aria-labelledby="history-tab" tabindex="0">
+                          <div class="row">
+                            <div class="col">
+                              <div class="tab-header-full text-white">
+                                <p class="mt-5 text-white  fs-2 text-center" style="font-weight: bolder;">
+                                    Welcome to <span><img src="unnamed.webp" alt="" style="width: 50px;"></span> Bank
+                                </p>
+                            </div>
+                            </div>
+                          </div>
+                          
+                          <p class="fw-bold fs-2 mt-5">Trasanctions</p>
+
+                          <div>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#requestHistoryModal">
+                                      Request More Transaction History
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="requestHistoryModal" tabindex="-1" aria-labelledby="requestHistoryModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="requestHistoryModalLabel">Request More Transaction History</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <div class="modal-body">
+                                            <p>If you’d like to receive more transaction history for a particular period, please fill in your preferred date range and email address. The report will be sent directly to your inbox.</p>
+                                            <form>
+                                              <div class="mb-3">
+                                                <label for="dateRange" class="form-label">Preferred Date Range</label>
+                                                <input type="text" class="form-control" id="dateRange" placeholder="e.g. Jan 2024 – Mar 2024">
+                                              </div>
+                                              <div class="mb-3">
+                                                <label for="userEmail" class="form-label">Your Email Address</label>
+                                                <input type="email" class="form-control" id="userEmail" placeholder="you@example.com">
+                                              </div>
+                                              <p>You can also directly email us at <a href="mailto:youremail@bank.com" class="text-success">youremail@bank.com</a></p>
+                                            </form>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success">Send Request</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                          </div>  
+
+                           <div>
+                            <table class="table table-bordered table-hover mt-3">
+                              <thead class="table-dark">
+                                <tr class="fw-medium">
+                                  <th>Icon</th>
+                                  <th>Description</th>
+                                  <th>Type</th>
+                                  <th>Amount</th>
+                                  <th>Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-success"></i></td>
+                                  <td>Direct Deposit</td>
+                                  <td>Deposit</td>
+                                  <td class="text-success">+$2,500.00</td>
+                                  <td>2025-03-26</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Starbucks</td>
+                                  <td>Debit Card</td>
+                                  <td class="text-danger">-$6.00</td>
+                                  <td>2025-03-26</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-success"></i></td>
+                                  <td>Transfer to Savings</td>
+                                  <td>Internal Transfer</td>
+                                  <td class="text-success">+$6,300.20</td>
+                                  <td>2025-03-22</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Netflix</td>
+                                  <td>Subscription</td>
+                                  <td class="text-danger">-$15.00</td>
+                                  <td>2025-03-22</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>ATM Withdrawal</td>
+                                  <td>Withdrawal</td>
+                                  <td class="text-danger">-$500.00</td>
+                                  <td>2025-03-21</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-success"></i></td>
+                                  <td>Direct Deposit</td>
+                                  <td>Deposit</td>
+                                  <td class="text-success">+$12,535.00</td>
+                                  <td>2025-03-20</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Direct Deposit</td>
+                                  <td>Deposit</td>
+                                  <td class="text-danger">-$4,140.39</td>
+                                  <td>2025-03-19</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Starbucks</td>
+                                  <td>Debit Card</td>
+                                  <td class="text-danger">-$20.00</td>
+                                  <td>2025-03-19</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Grocery - Trader's Joe</td>
+                                  <td>Debit Card</td>
+                                  <td class="text-danger">-$530.43</td>
+                                  <td>2025-03-17</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Amazon Purchase</td>
+                                  <td>Debit Card</td>
+                                  <td class="text-danger">-$825.30</td>
+                                  <td>2025-03-16</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Freelance Writing</td>
+                                  <td>Income</td>
+                                  <td class="text-success">+$600.00</td>
+                                  <td>2025-03-13</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Direct Deposit</td>
+                                  <td>Deposit</td>
+                                  <td class="text-success">+$3,900.00</td>
+                                  <td>2025-03-13</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Bank Investment</td>
+                                  <td>Credit</td>
+                                  <td class="text-success">+$1,233.40</td>
+                                  <td>2025-03-13</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Target</td>
+                                  <td>Shopping</td>
+                                  <td class="text-danger">-$120.75</td>
+                                  <td>2025-03-10</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Tax Refund</td>
+                                  <td>Government</td>
+                                  <td class="text-success">+$350.00</td>
+                                  <td>2025-03-06</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Hulu</td>
+                                  <td>Subscription</td>
+                                  <td class="text-danger">-$14.99</td>
+                                  <td>2025-03-05</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Amazon Order</td>
+                                  <td>Shopping</td>
+                                  <td class="text-danger">-$48.32</td>
+                                  <td>2025-03-02</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Stock Dividend</td>
+                                  <td>Investment</td>
+                                  <td class="text-success">+$2092.45</td>
+                                  <td>2025-02-27</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>McDonald's</td>
+                                  <td>Dining</td>
+                                  <td class="text-danger">-$9.85</td>
+                                  <td>2025-02-25</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Store Refund</td>
+                                  <td>Refund</td>
+                                  <td class="text-success">+$695.00</td>
+                                  <td>2025-02-22</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Gym Membership</td>
+                                  <td>Health</td>
+                                  <td class="text-danger">-$55.00</td>
+                                  <td>2025-02-20</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Gas Station</td>
+                                  <td>Fuel</td>
+                                  <td class="text-danger">-$40.10</td>
+                                  <td>2025-02-17</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Direct Deposit</td>
+                                  <td>Gig</td>
+                                  <td class="text-success">+$4,080.00</td>
+                                  <td>2025-02-13</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Walmart</td>
+                                  <td>Groceries</td>
+                                  <td class="text-danger">-$76.50</td>
+                                  <td>2025-02-11</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Transfer</td>
+                                  <td>Payment</td>
+                                  <td class="text-success">+$900.00</td>
+                                  <td>2025-02-09</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>iTunes</td>
+                                  <td>Music</td>
+                                  <td class="text-danger">-$1.29</td>
+                                  <td>2025-02-07</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Coffee Shop</td>
+                                  <td>Beverages</td>
+                                  <td class="text-danger">-$4.50</td>
+                                  <td>2025-02-05</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Check Deposit</td>
+                                  <td>Deposit</td>
+                                  <td class="text-success">+$2,990.00</td>
+                                  <td>2025-02-01</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Laptop Repair</td>
+                                  <td>Electronics</td>
+                                  <td class="text-danger">-$125.00</td>
+                                  <td>2025-01-28</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Pizza Hut</td>
+                                  <td>Dining</td>
+                                  <td class="text-danger">-$21.35</td>
+                                  <td>2025-01-26</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Refund - Cancelled Trip</td>
+                                  <td>Travel</td>
+                                  <td class="text-success">+$3,580.00</td>
+                                  <td>2025-01-24</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Movie Tickets</td>
+                                  <td>Entertainment</td>
+                                  <td class="text-danger">-$26.00</td>
+                                  <td>2025-01-21</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Grocery Store</td>
+                                  <td>Groceries</td>
+                                  <td class="text-danger">-$85.30</td>
+                                  <td>2025-01-18</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Freelance Writing</td>
+                                  <td>Income</td>
+                                  <td class="text-success">+$720.00</td>
+                                  <td>2025-01-14</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Pet Supplies</td>
+                                  <td>Pets</td>
+                                  <td class="text-danger">-$47.85</td>
+                                  <td>2025-01-11</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Pharmacy</td>
+                                  <td>Medical</td>
+                                  <td class="text-danger">-$13.70</td>
+                                  <td>2025-01-09</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Direct Deposit</td>
+                                  <td>Deposit</td>
+                                  <td class="text-success">+$5,099.00</td>
+                                  <td>2025-01-07</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Cinema</td>
+                                  <td>Entertainment</td>
+                                  <td class="text-danger">-$18.00</td>
+                                  <td>2025-01-04</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Freelance Writing</td>
+                                  <td>Income</td>
+                                  <td class="text-success">+$830.00</td>
+                                  <td>2025-01-01</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Fast Food</td>
+                                  <td>Dining</td>
+                                  <td class="text-danger">-$11.20</td>
+                                  <td>2024-12-29</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Spotify</td>
+                                  <td>Subscription</td>
+                                  <td class="text-danger">-$10.99</td>
+                                  <td>2024-12-27</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Gift Card Credit</td>
+                                  <td>Gift</td>
+                                  <td class="text-success">+$50.00</td>
+                                  <td>2024-12-25</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Hardware Store</td>
+                                  <td>Home</td>
+                                  <td class="text-danger">-$74.60</td>
+                                  <td>2024-12-22</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Uber</td>
+                                  <td>Transport</td>
+                                  <td class="text-danger">-$22.75</td>
+                                  <td>2024-12-19</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Refund - Amazon</td>
+                                  <td>Shopping</td>
+                                  <td class="text-success">+$3,045.99</td>
+                                  <td>2024-12-16</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Amazon</td>
+                                  <td>Debit Card</td>
+                                  <td class="text-danger">-$3,045.99</td>
+                                  <td>2024-12-14</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Gas Station</td>
+                                  <td>Fuel</td>
+                                  <td class="text-danger">-$39.10</td>
+                                  <td>2024-12-12</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Freelance Bonus</td>
+                                  <td>Income</td>
+                                  <td class="text-success">+$200.00</td>
+                                  <td>2024-12-09</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Electric Bill</td>
+                                  <td>Utilities</td>
+                                  <td class="text-danger">-$67.40</td>
+                                  <td>2024-12-06</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>eBay Purchase</td>
+                                  <td>Shopping</td>
+                                  <td class="text-danger">-$33.25</td>
+                                  <td>2024-12-04</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>PayPal Credit</td>
+                                  <td>Transfer</td>
+                                  <td class="text-success">+$3.020.00</td>
+                                  <td>2024-12-02</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Netflix</td>
+                                  <td>Subscription</td>
+                                  <td class="text-danger">-$15.49</td>
+                                  <td>2024-11-29</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Cashback Bonus</td>
+                                  <td>Reward</td>
+                                  <td class="text-success">+$12.75</td>
+                                  <td>2024-11-26</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Bookstore</td>
+                                  <td>Education</td>
+                                  <td class="text-danger">-$22.00</td>
+                                  <td>2024-11-24</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Uber Eats</td>
+                                  <td>Food Delivery</td>
+                                  <td class="text-danger">-$28.40</td>
+                                  <td>2024-11-21</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Refund - Walmart</td>
+                                  <td>Debit Card</td>
+                                  <td class="text-success">+$75.00</td>
+                                  <td>2024-11-19</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Public Transit</td>
+                                  <td>Transport</td>
+                                  <td class="text-danger">-$3.50</td>
+                                  <td>2024-11-17</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Sold Item - Marketplace</td>
+                                  <td>Sale</td>
+                                  <td class="text-success">+$130.00</td>
+                                  <td>2024-11-14</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Apple Store</td>
+                                  <td>Gadgets</td>
+                                  <td class="text-danger">-$999.99</td>
+                                  <td>2024-11-11</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Water Bill</td>
+                                  <td>Utilities</td>
+                                  <td class="text-danger">-$38.65</td>
+                                  <td>2024-11-08</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Freelance Writing</td>
+                                  <td>Income</td>
+                                  <td class="text-success">+$920.00</td>
+                                  <td>2024-11-05</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Subway</td>
+                                  <td>Dining</td>
+                                  <td class="text-danger">-$9.25</td>
+                                  <td>2024-11-03</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Gym Class</td>
+                                  <td>Fitness</td>
+                                  <td class="text-danger">-$18.00</td>
+                                  <td>2024-11-01</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Birthday Gift</td>
+                                  <td>Gift</td>
+                                  <td class="text-success">+$100.00</td>
+                                  <td>2024-10-29</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Streaming Rental</td>
+                                  <td>Entertainment</td>
+                                  <td class="text-danger">-$104.99</td>
+                                  <td>2024-10-27</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Ride Share Credit</td>
+                                  <td>Travel</td>
+                                  <td class="text-success">+$20.00</td>
+                                  <td>2024-10-25</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Coffee House</td>
+                                  <td>Food & Drink</td>
+                                  <td class="text-danger">-$45.60</td>
+                                  <td>2024-10-22</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Online Subscription</td>
+                                  <td>Learning</td>
+                                  <td class="text-danger">-$102.00</td>
+                                  <td>2024-10-20</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Bank Investment</td>
+                                  <td>Credit</td>
+                                  <td class="text-success">+$1,093.10</td>
+                                  <td>2024-10-17</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Convenience Store</td>
+                                  <td>Groceries</td>
+                                  <td class="text-danger">-$17.80</td>
+                                  <td>2024-10-15</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Event Reimbursement</td>
+                                  <td>Work</td>
+                                  <td class="text-success">+$60.00</td>
+                                  <td>2024-10-12</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Grocery Market</td>
+                                  <td>Groceries</td>
+                                  <td class="text-danger">-$43.20</td>
+                                  <td>2024-10-11</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Bank Credit</td>
+                                  <td>Credit</td>
+                                  <td class="text-success">+$380.00</td>
+                                  <td>2024-10-10</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Pet Grooming</td>
+                                  <td>Pets</td>
+                                  <td class="text-danger">-$25.00</td>
+                                  <td>2024-10-10</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Amazon Kindle</td>
+                                  <td>Books</td>
+                                  <td class="text-danger">-$11.99</td>
+                                  <td>2024-10-09</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Cash Deposit</td>
+                                  <td>Deposit</td>
+                                  <td class="text-success">+$250.00</td>
+                                  <td>2024-10-09</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Pizza Delivery</td>
+                                  <td>Food</td>
+                                  <td class="text-danger">-$18.40</td>
+                                  <td>2024-10-08</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Spotify</td>
+                                  <td>Subscription</td>
+                                  <td class="text-danger">-$10.99</td>
+                                  <td>2024-10-08</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Freelance Writing</td>
+                                  <td>Income</td>
+                                  <td class="text-success">+$180.00</td>
+                                  <td>2024-10-07</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Gas Station</td>
+                                  <td>Fuel</td>
+                                  <td class="text-danger">-$40.60</td>
+                                  <td>2024-10-07</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>iCloud Storage</td>
+                                  <td>Subscription</td>
+                                  <td class="text-danger">-$0.99</td>
+                                  <td>2024-10-06</td>
+                                </tr>
+                            
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Refund from Etsy</td>
+                                  <td>Shopping</td>
+                                  <td class="text-success">+$105.75</td>
+                                  <td>2024-10-06</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Coffee Shop</td>
+                                  <td>Dining</td>
+                                  <td class="text-danger">-$16.30</td>
+                                  <td>2024-10-05</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Hardware Store</td>
+                                  <td>Home</td>
+                                  <td class="text-danger">-$202.50</td>
+                                  <td>2024-10-05</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Direct Deposit</td>
+                                  <td>Deposit</td>
+                                  <td class="text-success">+$11,150.00</td>
+                                  <td>2024-10-04</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Laundry Service</td>
+                                  <td>Services</td>
+                                  <td class="text-danger">-$14.00</td>
+                                  <td>2024-10-04</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Bank Investment</td>
+                                  <td>Credit</td>
+                                  <td class="text-success">+$965.00</td>
+                                  <td>2024-10-03</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Pharmacy</td>
+                                  <td>Health</td>
+                                  <td class="text-danger">-$19.80</td>
+                                  <td>2024-10-03</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Transit Card</td>
+                                  <td>Transport</td>
+                                  <td class="text-danger">-$25.00</td>
+                                  <td>2024-10-02</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>PayPal Credit</td>
+                                  <td>Transfer</td>
+                                  <td class="text-success">+$4,040.00</td>
+                                  <td>2024-10-02</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Walmart</td>
+                                  <td>Shopping</td>
+                                  <td class="text-danger">-$55.30</td>
+                                  <td>2024-10-01</td>
+                                </tr>
+                            
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Rebate Credit</td>
+                                  <td>Refund</td>
+                                  <td class="text-success">+$7.00</td>
+                                  <td>2024-10-01</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Lunch Out</td>
+                                  <td>Dining</td>
+                                  <td class="text-danger">-$12.90</td>
+                                  <td>2024-09-30</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Streaming Service</td>
+                                  <td>Entertainment</td>
+                                  <td class="text-danger">-$6.99</td>
+                                  <td>2024-09-29</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Garage Sale Earnings</td>
+                                  <td>Side Hustle</td>
+                                  <td class="text-success">+$90.00</td>
+                                  <td>2024-09-28</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Mobile Recharge</td>
+                                  <td>Utilities</td>
+                                  <td class="text-danger">-$15.00</td>
+                                  <td>2024-09-27</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Survey Reward</td>
+                                  <td>Bonus</td>
+                                  <td class="text-success">+$5.00</td>
+                                  <td>2024-09-26</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Food Court</td>
+                                  <td>Dining</td>
+                                  <td class="text-danger">-$8.50</td>
+                                  <td>2024-09-25</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Utility Bill</td>
+                                  <td>Utilities</td>
+                                  <td class="text-danger">-$60.10</td>
+                                  <td>2024-09-24</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Workshop Payment</td>
+                                  <td>Freelance</td>
+                                  <td class="text-success">+$110.00</td>
+                                  <td>2024-09-23</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Hotel Booking</td>
+                                  <td>Travel</td>
+                                  <td class="text-danger">-$120.00</td>
+                                  <td>2024-09-22</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Taxi Ride</td>
+                                  <td>Transport</td>
+                                  <td class="text-danger">-$22.00</td>
+                                  <td>2024-09-20</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Bank Bonus</td>
+                                  <td>Promo</td>
+                                  <td class="text-success">+$15.00</td>
+                                  <td>2024-09-18</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Thrift Store</td>
+                                  <td>Shopping</td>
+                                  <td class="text-danger">-$27.45</td>
+                                  <td>2024-09-15</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Ice Cream Parlor</td>
+                                  <td>Entertainment</td>
+                                  <td class="text-danger">-$6.80</td>
+                                  <td>2024-09-13</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Wallet Top-Up</td>
+                                  <td>Transfer</td>
+                                  <td class="text-success">+$60.00</td>
+                                  <td>2024-09-11</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-down-circle text-danger"></i></td>
+                                  <td>Bakery</td>
+                                  <td>Food</td>
+                                  <td class="text-danger">-$5.60</td>
+                                  <td>2024-09-09</td>
+                                </tr>
+                                <tr class="fw-medium">
+                                  <td><i class="bi bi-arrow-up-circle text-success"></i></td>
+                                  <td>Transfer Received</td>
+                                  <td>Peer Transfer</td>
+                                  <td class="text-success">+$35.00</td>
+                                  <td>2024-09-07</td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                            
+                           </div>
+                           
+                          </div>
+
+                        <div class="tab-pane fade" id="movemoney-tab-pane" role="tabpanel" aria-labelledby="movemoney-tab" tabindex="0">
+                          <div class="row">
+                            <div class="col">
+                              <div class="tab-header-full text-white">
+                                <p class="mt-5 text-white  fs-2 text-center" style="font-weight: bolder;">
+                                    Welcome to <span><img src="unnamed.webp" alt="" style="width: 50px;"></span> Bank
+                                </p>
+                            </div>
+                            </div>
+                          </div>
+                          
+                          <p class="fs-1 fw-bold mt-5">Move Money</p>
+
+                            <div>
+                              <div class="container my-5">
+                                <!-- Page Title -->
+                                <h2 class="text-center text-success mt-5 fs-1">Transfer</h2>
+                              
+                                <!-- Form for Transfer -->
+                                <form>
+                                  <div class="mb-3 fs-2">
+                                    <label for="transferType" class="form-label mt-4">Transfer Type</label>
+                                    <select class="form-select" id="transferType" required>
+                                      <option value="zelle">Zelle</option>
+                                      <option value="bank">Normal Bank Transfer</option>
+                                      <option value="internal">Internal Bank Transfer</option>
+                                    </select>
+                                  </div>
+                              
+                                  <!-- Zelle Section -->
+                                  <div id="zelleSection">
+                                    <div class="mb-3 fs-2">
+                                      <label for="zelleEmail" class="form-label mt-4">Zelle Email Address</label>
+                                      <input type="email" class="form-control" id="zelleEmail" placeholder="Enter your Zelle email" required>
+                                    </div>
+                                  </div>
+                              
+                                  <!-- Normal Bank Transfer Section -->
+                                  <div id="bankSection" style="display: none;">
+                                    <div class="mb-3">
+                                      <label for="bankAccountNumber" class="form-label">Bank Account Number</label>
+                                      <input type="text" class="form-control" id="bankAccountNumber" placeholder="Enter your bank account number" required>
+                                    </div>
+                                    <div class="mb-3">
+                                      <label for="bankRoutingNumber" class="form-label">Bank Routing Number</label>
+                                      <input type="text" class="form-control" id="bankRoutingNumber" placeholder="Enter your bank routing number" required>
+                                    </div>
+                                  </div>
+                              
+                                  <!-- Internal Bank Transfer Section -->
+                                  <div id="internalSection" style="display: none;">
+                                    <div class="mb-3">
+                                      <label for="accountFrom" class="form-label">From Account</label>
+                                      <select class="form-select" id="accountFrom" required>
+                                        <option value="checking">Checking Account</option>
+                                        <option value="savings">Savings Account</option>
+                                      </select>
+                                    </div>
+                                    <div class="mb-3">
+                                      <label for="accountTo" class="form-label">To Account</label>
+                                      <select class="form-select" id="accountTo" required>
+                                        <option value="checking">Checking Account</option>
+                                        <option value="savings">Savings Account</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                              
+                                  <!-- Amount to Transfer -->
+                                  <div class="mb-3">
+                                    <label for="amount" class="form-label mt-4">Amount</label>
+                                    <input type="number" class="form-control" id="amount" placeholder="Enter the amount" required>
+                                  </div>
+                              
+                                  <!-- Create Transfer Button -->
+                                  <button type="submit" class="btn btn-success w-100 mt-3" onclick="handleTransfer(event)">Create Transfer</button>
+                                </form>
+                              </div>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+    
+    <script>
+        // Handle Transfer Type Change
+  document.getElementById("transferType").addEventListener("change", function() {
+    const transferType = this.value;
+    const zelleSection = document.getElementById("zelleSection");
+    const bankSection = document.getElementById("bankSection");
+    const internalSection = document.getElementById("internalSection");
+
+    if (transferType === "zelle") {
+      zelleSection.style.display = "block";
+      bankSection.style.display = "none";
+      internalSection.style.display = "none";
+    } else if (transferType === "bank") {
+      zelleSection.style.display = "none";
+      bankSection.style.display = "block";
+      internalSection.style.display = "none";
+    } else if (transferType === "internal") {
+      zelleSection.style.display = "none";
+      bankSection.style.display = "none";
+      internalSection.style.display = "block";
+    }
+  });
+
+  // Function to handle transfer creation
+  function handleTransfer(event) {
+    event.preventDefault(); // Prevent form submission
+    alert("Visit Bank");
+  }
+    </script>
+
+
+    <script>
+           function showPage(page) {
+    document.getElementById('settings').style.display = 'none';
+    document.getElementById('about').style.display = 'none';
+
+    if (page === 'settings') {
+      document.getElementById('settings').style.display = 'block';
+    } else if (page === 'about') {
+      document.getElementById('about').style.display = 'block';
+    }
+
+    // Close the offcanvas after selecting
+    let offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasMenu'));
+    offcanvas.hide();
+  }
+
+  function logout() {
+    // Redirect to index.html on logout
+    window.location.href = "index.html";
+  }
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
+</body>
+</html> 
